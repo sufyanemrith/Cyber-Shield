@@ -110,3 +110,5 @@ The broader pharmacy features described above remain planned. Browser layout, PH
 | Server logic | PHP with PDO |
 | Database | MySQL / MariaDB |
 | Collaboration | Git and GitHub |
+
+## NOTE: This is a demonstration app, not a production deployment.
