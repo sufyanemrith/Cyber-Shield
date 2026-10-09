@@ -1,6 +1,6 @@
 # iPHARMATIC
 
-**Care within reach — an online pharmacy designed around convenience and prescription safety. A University of Mauritius **ICT2213Y(3): Web Technologies and Security** group project. Cyber-Shield is the team's repository; **iPHARMATIC** is the pharmacy web application described in our requirements.**
+**Care within reach — an online pharmacy designed around convenience and prescription safety. A University of Mauritius **Web Technologies and Security** group project. Cyber-Shield is the team's repository; **iPHARMATIC** is the pharmacy web application described in our requirements.**
 
 ![PHP](https://img.shields.io/badge/Backend-PHP-777BB4?style=flat-square)
 ![Database](https://img.shields.io/badge/Database-MySQL%20%2F%20MariaDB-00758F?style=flat-square)
