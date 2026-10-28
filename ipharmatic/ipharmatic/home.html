@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPHARMATIC | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <script src="home.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <a class="logo" href="home.html" aria-label="iPHARMATIC home">
+            <img src="assets/logo.png" class="logo-icon" alt="">
+            <span>iPHARMATIC</span>
+        </a>
+
+        <nav class="navigation" aria-label="Main navigation">
+            <a href="home.html" aria-current="page">HOME</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="login.html">LOG IN</a>
+            <a href="signup.html">SIGN UP</a>
+        </nav>
+
+        <a class="cart" href="cart.php" aria-label="Shopping cart">
+            <span>0 item(s)</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+        </a>
+    </header>
+
+    <main>
+        
+        <section class="hero">
+            <div class="hero-text">
+                <h1>YOUR HEALTH, OUR PRIORITY!</h1>
+                <p>We are dedicated to providing top-quality pharmacy services in a modernized way never seen before.</p>
+                <p>Order over-the-counter and prescription medication online, verified by our pharmacists, delivered to your door.</p>
+
+                <form class="search" id="searchForm" action="products.html" method="get" novalidate>
+                    <div class="search-bar">
+                        <label class="sr-only" for="searchInput">Search medicines</label>
+                        <input type="text" id="searchInput" name="q" placeholder="Type here" maxlength="80" required aria-describedby="searchError">
+                        <button type="submit">Search</button>
+                    </div>
+                    <span class="search-error" id="searchError" role="alert" aria-live="polite"></span>
+                </form>
+
+                <div class="actions">
+                    <a class="btn" href="products.html">Shop Medicines</a>
+                    <a class="btn" href="login.html">Upload Prescription</a>
+                </div>
+
+                <div class="badges" aria-label="Our services">
+                    <span><img src="assets/verified.png" class="badge-icon" alt="">Verified</span>
+                    <span><img src="assets/fast delivery.png" class="badge-icon" alt="">Fast Delivery</span>
+                    <span><img src="assets/medavailability.png" class="badge-icon" alt="">MedAvailability</span>
+                </div>
+            </div>
+            <img class="hero-img" src="assets/pills.jpg" alt="Green medicine bottle with capsules">
+        </section>
+
+        <!-- Second screenshot: categories and new stock. -->
+        <section class="home-section home-section--categories" id="catalog">
+            <h2>Shop by category</h2>
+            <p class="empty">No categories yet. Check back soon.</p>
+        </section>
+        <section class="home-section home-section--stock" id="new-stock">
+            <h2>New in stock</h2>
+            <p class="empty">No products available right now.</p>
+        </section>
+    </main>
+</body>
+</html>
