@@ -1,0 +1,642 @@
+/* 1. COLOURS AND GENERAL STYLES */
+:root {
+    --ink: #0d031b;
+    --sage: #597c62;
+    --sage-dark: #3b5844;
+    --header: rgba(187, 202, 175, 0.9);
+    --mint: #e4ede0;
+    --off-white: #f1f5ed;
+    --aqua: #32cdd5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    padding-top: 80px;
+    color: var(--ink);
+    background: var(--sage);
+}
+
+button,
+input {
+    font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--aqua);
+    outline-offset: 2px;
+}
+
+/* 2. HEADER - MATCHING LOGIN.CSS */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 80px;
+    padding: 0 clamp(16px, 3vw, 60px);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--header);
+}
+
+/* PHARMACY LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: auto;
+    flex-shrink: 0;
+    font-size: 1.8em;
+    font-weight: 800;
+    color: var(--ink);
+    text-decoration: none;
+    user-select: none;
+}
+
+.logo-icon {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo span {
+    font-family: 'Aleo', Georgia, serif;
+    font-size: inherit;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+
+/* NAVIGATION */
+.navigation {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    gap: clamp(12px, 2.5vw, 32px);
+    min-width: 0;
+}
+
+.navigation a {
+    position: relative;
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #CDFC8A;
+    transition: width 0.3s ease;
+}
+
+.navigation a:hover::after {
+    width: 100%;
+}
+
+.navigation a:hover {
+    color: #f8f8ff;
+}
+
+
+/* ACCOUNT AND CART */
+.account-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.cart svg {
+    width: 32px;
+    height: 32px;
+}
+
+.welcome {
+    max-width: 150px;
+    font-size: 14px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+
+/* LOGOUT BUTTON */
+.logout-form {
+    margin: 0;
+}
+
+.logout-button {
+    padding: 9px 15px;
+    border: 0;
+    border-radius: 50px;
+    background: linear-gradient(135deg,#32CDD5,#249ea5);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(50, 205, 213, 0.4);
+}
+
+
+/* 3. ORIGINAL TWO-COLUMN HERO */
+.hero {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    min-height: calc(100vh - 80px);
+    min-height: calc(100svh - 80px);
+    background: var(--sage);
+    color: #fff;
+}
+
+.hero-text {
+    min-width: 0;
+    padding: 42px clamp(20px, 3vw, 50px) 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 3vw, 50px);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.15;
+    text-align: center;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.hero-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* 4. SEARCH BAR */
+.search {
+    width: min(100%, 540px);
+    margin: 86px auto 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 60px;
+    padding: 6px;
+    background: #fff;
+    border-radius: 999px;
+}
+
+.search input {
+    flex: 1 1 auto;
+    width: 0;
+    min-width: 0;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--ink);
+    font-size: 16px;
+    outline: none;
+}
+
+.search input::placeholder {
+    color: #777;
+}
+
+.search button {
+    flex: 0 0 auto;
+    align-self: stretch;
+    min-width: 110px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 999px;
+    background: var(--sage-dark);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background: #294532;
+}
+
+.search-error {
+    display: block;
+    min-height: 18px;
+    margin-top: 8px;
+    color: #ffe0e0;
+    font-size: 13px;
+    text-align: center;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* 5. ACTION BUTTONS */
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(24px, 8vw, 130px);
+    margin-top: 64px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 999px;
+    background: linear-gradient(135deg,#32cdd5,#249ea5);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(50, 205, 213, 0.4);
+}
+
+/* 6. SERVICE BADGES */
+.badges {
+    display: flex;
+    position: static;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: auto;
+    margin-bottom: 120px;
+    padding-top: 12px;
+    color: #fff;
+    letter-spacing: 1.5px;
+}
+
+.badges span {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    white-space: nowrap;
+}
+
+.badge-icon {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+/* 7. LOWER PRODUCT SECTIONS */
+.home-section {
+    min-height: 185px;
+    padding: 40px clamp(20px, 4.25vw, 68px);
+    scroll-margin-top: 80px;
+}
+
+.home-section--categories {
+    background: var(--mint);
+}
+
+.home-section--stock {
+    background: var(--off-white);
+}
+
+.home-section--results {
+    background: var(--off-white);
+}
+
+.home-section--notice {
+    background: var(--mint);
+}
+
+.home-section h2 {
+    margin-bottom: 32px;
+    color: var(--sage-dark);
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.empty {
+    color: var(--sage-dark);
+    font-size: 16px;
+}
+
+/* PRODUCT CATEGORIES */
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.chip {
+    padding: 10px 18px;
+    border: 1px solid rgba(59, 88, 68, 0.2);
+    border-radius: 50px;
+    background: #fff;
+    color: var(--sage-dark);
+    font-weight: 600;
+}
+
+
+/* PRODUCT GRID */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+}
+
+.product-card h3 {
+    margin-bottom: 12px;
+    color: var(--ink);
+    font-size: 18px;
+    overflow-wrap: anywhere;
+}
+
+.price {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--sage-dark);
+}
+
+.rx {
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #9c421a;
+}
+
+
+/* 8. TABLET RESPONSIVE DESIGN */
+@media (max-width: 1100px) {
+
+    header {
+        padding-inline: 16px;
+        gap: 12px;
+    }
+
+    .navigation {
+        gap: 12px;
+    }
+
+    .navigation a,
+    .cart {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: clamp(29px, 3.3vw, 42px);
+    }
+
+    .hero-text {
+        padding-inline: 24px;
+    }
+
+    .search {
+        margin-top: 55px;
+    }
+
+    .actions {
+        gap: 24px;
+        margin-top: 44px;
+    }
+
+    .badges {
+        gap: 12px;
+        letter-spacing: 0.5px;
+    }
+
+    .badges span {
+        font-size: 13px;
+    }
+
+    .welcome {
+        max-width: 110px;
+        font-size: 12px;
+    }
+}
+
+/* 9. HERO IMAGE STACKING */
+@media (max-width: 850px) {
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .hero-text {
+        padding: 36px 20px 30px;
+    }
+
+    .hero h1 {
+        font-size: clamp(26px, 5vw, 38px);
+    }
+
+    .search {
+        margin-top: 40px;
+    }
+
+    .actions {
+        margin-top: 32px;
+    }
+
+    .badges {
+        margin-top: 25px;
+        padding-top: 20px;
+    }
+
+    .hero-img {
+        height: 350px;
+    }
+}
+
+/* 10. MOBILE HEADER MATCHING LOGIN */
+@media (max-width: 760px) {
+
+    body {
+        padding-top: 0;
+    }
+
+    header {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 16px;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .logo {
+        margin-right: 0;
+        font-size: 1.75rem;
+    }
+
+    .navigation {
+        flex: initial;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 16px;
+    }
+
+    .navigation a {
+        font-size: 0.8rem;
+    }
+
+    .account-actions {
+        width: 100%;
+
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .welcome {
+        max-width: none;
+    }
+
+    .home-section {
+        scroll-margin-top: 0;
+    }
+}
+
+/* 11. SMALL MOBILE SCREENS */
+@media (max-width: 480px) {
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .search-bar {
+        min-height: 54px;
+    }
+
+    .search input {
+        padding-inline: 14px;
+        font-size: 14px;
+    }
+
+    .search button {
+        min-width: 90px;
+        padding-inline: 12px;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        min-width: 190px;
+    }
+
+    .badges {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .home-section {
+        padding: 32px 20px;
+    }
+
+    .home-section h2 {
+        font-size: 24px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* --- SHOPPING CART LINK STYLING --- */
+.cart-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.cart-link:hover {
+    color: #4ecdc4;
+    background: rgba(78, 205, 196, 0.1);
+    transform: scale(1.05);
+}
+
+.cart-count {
+    font-weight: 600;
+    font-size: 16px;
+}
