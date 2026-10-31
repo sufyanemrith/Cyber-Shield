@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header> 
+        
+        <!-- IPHARMATIC LOGO -->
+        <a class="logo">
+            <img src="assets/logo.png" class="logo-icon" alt="iPHARMATIC Logo">
+            <span>iPHARMATIC</span>
+        </a>
+
+        <nav class="navigation">
+            <a href="#">HOME</a>
+            <a href="#">FAQs</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">LOG IN</a> 
+            <a href="#">SIGN UP</a>
+        </nav>
+
+        <a class="cart" href="cart.html">
+            <span>0 item(s)</span>
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-label="Cart">
+                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+        </a>
+        
+    </header>
+        
+        <form class="signup-container" action="signup.php" method="POST">
+            <h1 class="signup-title">SIGN UP</h1> 
+
+            <section class="input-box">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="USERNAME" required>
+                <i class="bx bxs-user"></i>
+            </section>
+        
+            <section class="input-box"> 
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="FULL NAME" required>
+                <i class="bx bxs-user details"></i>
+            </section>
+
+            <section class="input-box">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                <i class="bx bxs-user"></i>
+            </section>
+
+            <section class="input-box">
+                <label for="password">Password</label>
+                <input type="password"  id="password" name="password" placeholder="Enter your password" minlength="8" required aria-describedby="passwordMessage" autocomplete="new-password">
+                <i class="bx bxs-lock-alt"></i>
+
+                <button type="button" class="toggle-password" id="toggle-password" aria-label="Show Password" aria-pressed="false">
+                    <i class="bx bx-show" id="eyeIcon"></i>
+                </button> 
+
+                <small id="passwordMessage" class="password-message" aria-live="polite"></small>
+            </section>
+
+            <section class="terms-box">
+                <input type="checkbox" id="terms" name="terms" required>
+                
+                <label for="terms">
+                    I accept the <a href="terms.html" target="_blank" rel="noopener noreferrer">Terms and Conditons</a>
+                </label>
+                
+            </section>
+
+            <button class="signup-button" type="submit">
+                Sign Up 
+            </button>
+
+            <h5 class="dont-have-an-account">
+                Already have an account?
+                <a href="login.html"><b>Log In</b></a>
+            </h5>
+        </form>
+
+    <script src="signup.js"></script>
+</body>
+</html>
