@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <title>iPHARMATIC | Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <!-- IPHARMATIC LOGO -->
+        <a href="home.php" class="logo">
+            <img src="assets/logo.png" class="logo-icon" alt="iPHARMATIC Logo">
+            <span>iPHARMATIC</span>
+        </a>
+
+        <nav class="navigation" aria-label="Main navigation">
+            <a href="home.php">HOME</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="login.html" aria-current="page">LOG IN</a>
+            <a href="signup.html">SIGN UP</a>
+        </nav>
+
+        <a class="cart" href="cart.php" aria-label="Cart (login required)">
+
+            <span>0 item(s)</span>
+
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true">
+                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+
+        </a>
+
+    </header>
+
+    <form class="signin-container" id="loginForm" method="post" action="login.php">
+
+        <h1 class="login-title">LOGIN</h1>
+
+        <!-- EMAIL -->
+        <section class="input-box">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required autocomplete="username">
+            <i class="bx bxs-user" aria-hidden="true"></i>
+
+        </section>
+
+        <!-- PASSWORD -->
+        <section class="input-box">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required autocomplete="current-password">
+            <i class="bx bxs-lock-alt" aria-hidden="true"></i>
+
+            <!-- SHOW / HIDE PASSWORD -->
+            <button type="button" class="toggle-password" id="toggle-password" aria-label="Show password"aria-pressed="false">
+                <i class="bx bx-show" id="eyeIcon" aria-hidden="true"></i>
+            </button>
+
+        </section>
+
+        <!-- LOGIN BUTTON -->
+        <button class="login-button" type="submit" id="loginButton">
+            Login
+        </button>
+
+        <!-- LOGIN FEEDBACK -->
+        <small id="loginMessage" class="login-message" aria-live="polite"></small>
+
+        <h5 class="dont-have-an-account">
+            Don't have an account?
+            <a href="signup.html"><b>Sign Up</b></a>
+
+        </h5>
+
+    </form>
+
+    <script src="login.js"></script>
+
+</body>
+</html>
